@@ -16,8 +16,6 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - uses: android-actions/setup-android@v3
-
       - name: Vérifier les liens du catalogue de modèles
         continue-on-error: true
         run: |
@@ -31,10 +29,14 @@ jobs:
                   print('::warning::Lien cassé pour', m['id'], e)
           PYEOF
 
-      - name: Installer NDK + CMake
+      - name: Installer NDK + CMake (SDK Android déjà présent sur le runner)
         run: |
-          sdkmanager "ndk;26.3.11579264" "cmake;3.22.1"
-          echo "NDK=$ANDROID_SDK_ROOT/ndk/26.3.11579264" >> $GITHUB_ENV
+          SDK="${ANDROID_SDK_ROOT:-$ANDROID_HOME}"
+          echo "SDK Android : $SDK"
+          yes | sdkmanager --licenses > /dev/null || true
+          sdkmanager "platforms;android-34" "build-tools;34.0.0" "ndk;26.3.11579264" "cmake;3.22.1"
+          echo "NDK=$SDK/ndk/26.3.11579264" >> $GITHUB_ENV
+          echo "ANDROID_HOME=$SDK" >> $GITHUB_ENV
 
       - name: Compiler llama.cpp (serveur de chat) pour Android arm64
         run: |
