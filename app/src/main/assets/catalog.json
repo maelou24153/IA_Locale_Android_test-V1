@@ -1,0 +1,82 @@
+[
+  {
+    "id": "qwen25-05b", "type": "chat", "minRam": 3,
+    "name": "Qwen2.5 0.5B (très léger, ~0,4 Go)",
+    "file": "qwen2.5-0.5b-instruct-q4_k_m.gguf",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/resolve/main/qwen2.5-0.5b-instruct-q4_k_m.gguf"
+  },
+  {
+    "id": "qwen25-15b", "type": "chat", "minRam": 4,
+    "name": "Qwen2.5 1.5B (équilibré, ~1,1 Go)",
+    "file": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/main/qwen2.5-1.5b-instruct-q4_k_m.gguf"
+  },
+  {
+    "id": "qwen25-3b", "type": "chat", "minRam": 6,
+    "name": "Qwen2.5 3B (discussion, ~2 Go)",
+    "file": "qwen2.5-3b-instruct-q4_k_m.gguf",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF/resolve/main/qwen2.5-3b-instruct-q4_k_m.gguf"
+  },
+  {
+    "id": "qwen3-4b", "type": "chat", "minRam": 6,
+    "name": "Qwen3 4B (raisonnement, ~2,5 Go)",
+    "file": "Qwen3-4B-Q4_K_M.gguf",
+    "url": "https://huggingface.co/Qwen/Qwen3-4B-GGUF/resolve/main/Qwen3-4B-Q4_K_M.gguf"
+  },
+  {
+    "id": "phi35-mini", "type": "chat", "minRam": 6,
+    "name": "Phi-3.5 mini 3.8B (logique et code, ~2,4 Go)",
+    "file": "Phi-3.5-mini-instruct-Q4_K_M.gguf",
+    "url": "https://huggingface.co/bartowski/Phi-3.5-mini-instruct-GGUF/resolve/main/Phi-3.5-mini-instruct-Q4_K_M.gguf"
+  },
+  {
+    "id": "llama32-3b", "type": "chat", "minRam": 6,
+    "name": "Llama 3.2 3B (polyvalent, ~2 Go)",
+    "file": "Llama-3.2-3B-Instruct-Q4_K_M.gguf",
+    "url": "https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF/resolve/main/Llama-3.2-3B-Instruct-Q4_K_M.gguf"
+  },
+  {
+    "id": "gemma2-2b", "type": "chat", "minRam": 4,
+    "name": "Gemma 2 2B (rapide, ~1,7 Go)",
+    "file": "gemma-2-2b-it-Q4_K_M.gguf",
+    "url": "https://huggingface.co/bartowski/gemma-2-2b-it-GGUF/resolve/main/gemma-2-2b-it-Q4_K_M.gguf"
+  },
+  {
+    "id": "r1-15b", "type": "chat", "minRam": 4,
+    "name": "DeepSeek-R1 Distill 1.5B (réfléchit avant de répondre, ~1,1 Go)",
+    "file": "DeepSeek-R1-Distill-Qwen-1.5B-Q4_K_M.gguf",
+    "url": "https://huggingface.co/bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF/resolve/main/DeepSeek-R1-Distill-Qwen-1.5B-Q4_K_M.gguf"
+  },
+  {
+    "id": "coder-15b", "type": "chat", "minRam": 4,
+    "name": "Qwen2.5-Coder 1.5B (code, léger, ~1,1 Go)",
+    "file": "qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF/resolve/main/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf"
+  },
+  {
+    "id": "coder-3b", "type": "chat", "minRam": 6,
+    "name": "Qwen2.5-Coder 3B (code, recommandé, ~2 Go)",
+    "file": "qwen2.5-coder-3b-instruct-q4_k_m.gguf",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/main/qwen2.5-coder-3b-instruct-q4_k_m.gguf"
+  },
+  {
+    "id": "coder-7b", "type": "chat", "minRam": 10,
+    "name": "Qwen2.5-Coder 7B (code, le plus fort, ~4,7 Go, 12 Go de RAM)",
+    "file": "Qwen2.5-Coder-7B-Instruct-Q4_K_M.gguf",
+    "url": "https://huggingface.co/bartowski/Qwen2.5-Coder-7B-Instruct-GGUF/resolve/main/Qwen2.5-Coder-7B-Instruct-Q4_K_M.gguf"
+  },
+  {
+    "id": "sd15-q4", "type": "image", "minRam": 4,
+    "name": "Stable Diffusion 1.5 Q4 (qualité, lent, ~0,6 Go)",
+    "file": "stable-diffusion-v1-5-pruned-emaonly-Q4_0.gguf",
+    "url": "https://huggingface.co/second-state/stable-diffusion-v1-5-GGUF/resolve/main/stable-diffusion-v1-5-pruned-emaonly-Q4_0.gguf",
+    "steps": 18, "cfg": 7.0
+  },
+  {
+    "id": "sdturbo", "type": "image", "minRam": 4,
+    "name": "SD-Turbo (rapide, 4 étapes)",
+    "file": "sd_turbo-f16-q8_0.gguf",
+    "url": "https://huggingface.co/Green-Sky/SD-Turbo-GGUF/resolve/main/sd_turbo-f16-q8_0.gguf",
+    "steps": 4, "cfg": 1.0
+  }
+]
