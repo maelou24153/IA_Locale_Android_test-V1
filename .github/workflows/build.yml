@@ -33,8 +33,12 @@ jobs:
         run: |
           SDK="${ANDROID_SDK_ROOT:-$ANDROID_HOME}"
           echo "SDK Android : $SDK"
-          yes | sdkmanager --licenses > /dev/null || true
-          sdkmanager "platforms;android-34" "build-tools;34.0.0" "ndk;26.3.11579264" "cmake;3.22.1"
+          SM=$(ls "$SDK"/cmdline-tools/*/bin/sdkmanager 2>/dev/null | head -n1 || true)
+          if [ -z "$SM" ]; then SM=$(find "$SDK" -name sdkmanager -type f 2>/dev/null | head -n1); fi
+          echo "sdkmanager : $SM"
+          test -x "$SM"
+          yes | "$SM" --sdk_root="$SDK" --licenses > /dev/null || true
+          "$SM" --sdk_root="$SDK" "platforms;android-34" "build-tools;34.0.0" "ndk;26.3.11579264" "cmake;3.22.1"
           echo "NDK=$SDK/ndk/26.3.11579264" >> $GITHUB_ENV
           echo "ANDROID_HOME=$SDK" >> $GITHUB_ENV
 
