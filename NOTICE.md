@@ -68,7 +68,9 @@ Tout fonctionne sur ton téléphone : tes discussions, ton code et tes images ne
 
 ## Problèmes courants
 - **Moteur absent** : l'APK a été compilé sans les moteurs. Relance le workflow GitHub et lis son journal.
-- **Le moteur s'arrête** : mémoire insuffisante. Choisis une IA plus petite, baisse la mémoire de conversation ou prends une image plus petite.
+- **Le moteur s'arrête** : le message affiche un code et les dernières lignes du moteur.
+- Code 137 : mémoire insuffisante. Choisis une IA plus petite (Qwen2.5 1.5B sur un téléphone de 4 Go), mets la mémoire de conversation à 2048 dans Machines › Réglages, ferme les autres applis.
+- Autre code : envoie-moi le message complet pour que je corrige.
 - **Téléchargement refusé** : le lien a changé ou le modèle est réservé. Cherche-le dans Hugging Face ou ajoute ton jeton.
 - **Plan illisible dans Projet** : reformule la demande en une phrase claire, ou prends un modèle plus grand.
 - **Réponses lentes** : normal sur processeur. Les modèles 0,5B et 1,5B sont les plus rapides.
